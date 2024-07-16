@@ -1,8 +1,13 @@
+import Image from "next/image";
+
 interface SkillsCardProps {
   title: string;
   description: string;
   items: string[];
   tools: string[];
+  header1: string;
+  header2: string;
+  iconPath: string;
 }
 
 export default function SkillsCard({
@@ -10,37 +15,25 @@ export default function SkillsCard({
   description,
   items,
   tools,
+  header1,
+  header2,
+  iconPath,
 }: SkillsCardProps) {
   return (
     <div className="p-6">
-      <div className="flex items-center mb-4">
-        <div className="p-2 rounded-full bg-green-200 text-green-700">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            className="h-6 w-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M5 13l4 4L19 7"
-            />
-          </svg>
+      <div className="flex flex-col items-center mb-4 gap-3">
+        <div className="p-2 rounded-full bg-mintGreen">
+          <Image src={iconPath} alt="skills icon" width={40} height={40} />
         </div>
-        <h2 className="ml-2 text-2xl font-bold">{title}</h2>
+        <h2 className="text-2xl font-bold">{title}</h2>
       </div>
       <p className="text-gray-600 mb-4">{description}</p>
-      <h3 className="text-purple-600 mb-2">Things I enjoy designing:</h3>
-      <ul className="list-disc list-inside mb-4">
-        {items.map((item, index) => (
-          <li key={index}>{item}</li>
-        ))}
+      <h3 className="text-daisyPurple-500 mb-2">{header1}</h3>
+      <ul className="mb-4">
+        <li>{items.join(", ")}</li>
       </ul>
-      <h3 className="text-purple-600 mb-2">Design Tools:</h3>
-      <ul className="list-disc list-inside">
+      <h3 className="text-daisyPurple-500 mb-2">{header2}</h3>
+      <ul className="">
         {tools.map((tool, index) => (
           <li key={index}>{tool}</li>
         ))}

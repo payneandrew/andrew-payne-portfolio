@@ -12,7 +12,11 @@ export const daisyPurpleScale = {
   900: "#431EA6",
   950: "#240F66",
 };
+export const mintGreenScale = {
+  DEFAULT: "#5BE9B9",
+};
 
 export const primaryColors = {
   daisyPurple: daisyPurpleScale,
+  mintGreen: mintGreenScale,
 };
