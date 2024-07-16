@@ -1,7 +1,16 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 export const NavBar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <>
       <div>
@@ -11,27 +20,65 @@ export const NavBar = () => {
               <Link href="/">
                 <Image
                   src={"/home-icon.png"}
-                  alt="andrew-payne-headshot"
+                  alt="home-icon"
                   width={70}
                   height={70}
                 />
               </Link>
-              <div className="hidden lg:block">
-                <div className="flex items-center">
+              <div className="lg:hidden">
+                <button
+                  onClick={toggleMenu}
+                  className="text-black focus:outline-none"
+                >
+                  {isMenuOpen ? (
+                    <svg
+                      className="w-6 h-6"
+                      fill="none"
+                      stroke="#491FB8"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M6 18L18 6M6 6l12 12"
+                      />
+                    </svg>
+                  ) : (
+                    <svg
+                      className="w-6 h-6"
+                      fill="none"
+                      stroke="#491FB8"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M4 6h16M4 12h16m-7 6h7"
+                      />
+                    </svg>
+                  )}
+                </button>
+              </div>
+              <div className={`${isMenuOpen ? "block" : "hidden"} lg:block`}>
+                <div className="flex flex-col lg:flex-row items-center">
                   <Link
-                    href={"/."}
-                    className="relative mr-6 text-lg font-medium text-black after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:rounded-sm after:bg-daisyPurple-800 after:transition-all after:duration-300 after:ease-linear hover:text-daisyPurple-800 hover:after:w-full xl:mr-[30px]"
+                    href={"/about"}
+                    className="relative mr-6 mb-4 lg:mb-0 text-lg font-medium text-black after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:rounded-sm after:bg-daisyPurple-800 after:transition-all after:duration-300 after:ease-linear hover:text-daisyPurple-800 hover:after:w-full xl:mr-[30px]"
                   >
                     About
                   </Link>
                   <Link
-                    href={"/."}
-                    className="relative mr-6 text-lg font-medium text-black after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:rounded-sm after:bg-daisyPurple-800 after:transition-all after:duration-300 after:ease-linear hover:text-daisyPurple-800 hover:after:w-full xl:mr-[44px]"
+                    href={"/work"}
+                    className="relative mr-6 mb-4 lg:mb-0 text-lg font-medium text-black after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:rounded-sm after:bg-daisyPurple-800 after:transition-all after:duration-300 after:ease-linear hover:text-daisyPurple-800 hover:after:w-full xl:mr-[44px]"
                   >
                     Work
                   </Link>
                   <Link
-                    href={"/."}
+                    href={"/"}
                     className="hidden h-[47px] w-[122px] items-center justify-center overflow-hidden rounded border-2 border-solid border-daisyPurple-800 bg-daisyPurple-800 text-base font-semibold text-white duration-300 ease-linear hover:bg-white hover:text-daisyPurple-800 sm:flex"
                   >
                     Say Hello
