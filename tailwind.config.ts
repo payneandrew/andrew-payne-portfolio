@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import { primaryColors } from "./styling/colors";
 
 const config: Config = {
   content: [
@@ -9,9 +10,14 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "home-gradient": `linear-gradient(180deg, #FFF 27.96%, ${primaryColors.daisyPurple[200]} 100%)`,
+      },
+      colors: {
+        ...primaryColors,
+      },
+      fontFamily: {
+        poppins: "Poppins, sans-serif",
+        jakarta: "JakartaPlus, sans-serif",
       },
     },
   },
