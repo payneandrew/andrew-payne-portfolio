@@ -78,8 +78,8 @@ export const NavBar = () => {
                     Work
                   </Link>
                   <Link
-                    href={"/"}
-                    className="hidden h-[47px] w-[122px] items-center justify-center overflow-hidden rounded border-2 border-solid border-daisyPurple-800 bg-daisyPurple-800 text-base font-semibold text-white duration-300 ease-linear hover:bg-white hover:text-daisyPurple-800 sm:flex"
+                    href={"/say-hello"}
+                    className="h-12 w-28 items-center justify-center overflow-hidden rounded border-2 border-solid border-daisyPurple-800 bg-daisyPurple-800 font-semibold text-white duration-300 ease-linear hover:bg-white hover:text-daisyPurple-800 flex"
                   >
                     Say Hello
                   </Link>
