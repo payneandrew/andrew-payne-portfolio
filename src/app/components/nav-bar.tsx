@@ -66,11 +66,17 @@ export const NavBar = () => {
               <div className={`${isMenuOpen ? "block" : "hidden"} lg:block`}>
                 <div className="flex flex-col lg:flex-row items-center">
                   <Link
+                    href={"/"}
+                    className="relative mr-6 mb-4 lg:mb-0 text-lg font-medium text-black after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:rounded-sm after:bg-daisyPurple-800 after:transition-all after:duration-300 after:ease-linear hover:text-daisyPurple-800 hover:after:w-full xl:mr-[30px]"
+                  >
+                    Home
+                  </Link>
+                  {/* <Link
                     href={"/about"}
                     className="relative mr-6 mb-4 lg:mb-0 text-lg font-medium text-black after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:rounded-sm after:bg-daisyPurple-800 after:transition-all after:duration-300 after:ease-linear hover:text-daisyPurple-800 hover:after:w-full xl:mr-[30px]"
                   >
                     About
-                  </Link>
+                  </Link> */}
                   <Link
                     href={"/work"}
                     className="relative mr-6 mb-4 lg:mb-0 text-lg font-medium text-black after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:rounded-sm after:bg-daisyPurple-800 after:transition-all after:duration-300 after:ease-linear hover:text-daisyPurple-800 hover:after:w-full xl:mr-[44px]"
