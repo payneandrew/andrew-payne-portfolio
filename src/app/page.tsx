@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Typewriter from "typewriter-effect";
-import SkillsCard from "./components/skills-card";
+import SkillsCard, { SkillsCardProps } from "./components/skills-card";
 
 export default function Home() {
   return (
@@ -11,14 +11,14 @@ export default function Home() {
           <div className="text-4xl md:text-6xl font-bold text-gray-900 h-36">
             <Typewriter
               options={{
-                strings: ["Frontend Software Engineer, Gardening Aficionado"],
+                strings: ["Frontend Software Engineer"],
                 autoStart: true,
                 loop: true,
               }}
             />
           </div>
           <p className="text-lg md:text-xl text-gray-600 mt-4">
-            I design and code beautifully simple things, and I love what I do.
+            I ideate and code beautifully simple things, and I love what I do.
           </p>
         </div>
         <div className="mt-6">
@@ -30,7 +30,6 @@ export default function Home() {
             height={500}
           />
         </div>
-        {/* <IntroSection /> */}
         <div className="grid grid-cols-1 md:grid-cols-3 rounded-2xl bg-white">
           <SkillsCard {...frontendDeveloperData} />
           <SkillsCard {...backendDeveloperData} />
@@ -41,45 +40,51 @@ export default function Home() {
   );
 }
 
-const frontendDeveloperData = {
+const frontendDeveloperData: SkillsCardProps = {
   title: "Frontend Development",
   description:
     "I like to code things from scratch, and enjoy bringing ideas to life in the browser and on mobile.",
-  items: ["TypeScript", "JavaScript", "CSS", "HTML", "Swift", "Kotlin"],
-  tools: [
+  list1: ["TypeScript", "JavaScript", "CSS", "HTML", "Swift", "Kotlin"],
+  list2: [
     "React",
-    "React Native",
-    "Expo",
     "NextJS",
     "VueJS",
-    "Angular",
-    "Bitbucket",
-    "Github",
     "Tailwind CSS",
-    "VS Code",
+    "Angular",
+    "React Native",
+    "Expo",
+    "SwiftUI",
   ],
   header1: "Languages I speak:",
-  header2: "Dev Tools:",
+  header2: "Frameworks and Libraries:",
   iconPath: "/skills/frontend-development.png",
 };
 
-const backendDeveloperData = {
+const backendDeveloperData: SkillsCardProps = {
   title: "Backend Development",
   description:
-    "I focus on building robust server-side applications and APIs that power modern web and mobile applications. I enjoy optimizing backend code for performance, scalability, and reliability.",
-  items: ["TypeScript", "JavaScript", "Java", "Python"],
-  tools: ["NodeJS", "AWS Lambda", "Spring Boot"],
+    "I am capable of building server-side applications and APIs that power modern web and mobile applications.",
+  list1: ["TypeScript", "JavaScript", "Java", "Python"],
+  list2: ["Express", "NodeJS", "AWS Lambda", "Spring Boot"],
   header1: "Languages I speak:",
-  header2: "Dev Tools:",
+  header2: "Frameworks and Libraries:",
   iconPath: "/skills/backend-development.png",
 };
 
-const testingData = {
-  title: "Testing",
+const testingData: SkillsCardProps = {
+  title: "Testing and Tooling",
   description:
-    "I am passionate about ensuring the quality and reliability of software through rigorous testing methodologies. I specialize in writing automated tests for frontend and backend applications to deliver high-quality software.",
-  items: ["TypeScript", "JavaScript"],
-  tools: [
+    "I'm an advocate for building high-quality applications with a strong background in software testing.",
+  list1: [
+    "Docker",
+    "Azure",
+    "Github Actions",
+    "Jenkins",
+    "Github",
+    "Bitbucket",
+    "VS Code",
+  ],
+  list2: [
     "Jest",
     "React Testing Library",
     "Cypress E2E Tests",
@@ -89,41 +94,7 @@ const testingData = {
     "Android Espresso",
     "Appium",
   ],
-  header1: "Languages I speak:",
-  header2: "Testing Tools:",
+  header1: "Dev Tools:",
+  header2: "Frameworks and Libraries:",
   iconPath: "/skills/testing.png",
-};
-
-// const frontendDeveloperData = {
-//   title: "Frontend Developer",
-//   description:
-//     "I like to code things from scratch, and enjoy bringing ideas to life in the browser.",
-//   items: ["HTML", "Pug", "Slim", "CSS", "Sass", "Git"],
-//   tools: [
-//     "Astro JS",
-//     "Bitbucket",
-//     "Bootstrap",
-//     "Bulma",
-//     "Codekit",
-//     "Github",
-//     "Netlify",
-//     "Tailwind CSS",
-//     "VS Code",
-//   ],
-// };
-
-const mentorData = {
-  title: "Mentor",
-  description:
-    "I genuinely care about people, and enjoy helping them work on their craft.",
-  items: ["UX/UI", "Product design", "Freelancing"],
-  tools: [
-    "9+ years experience",
-    "30+ short courses",
-    "65+ bootcamps",
-    "250+ students",
-    "2,500+ mentor sessions",
-    "60+ group critiques",
-    "18,000+ bits of feedback",
-  ],
 };

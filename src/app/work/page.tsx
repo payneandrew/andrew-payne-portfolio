@@ -6,7 +6,7 @@ interface Project {
   description: string;
   imageUrl?: string;
   githubUrl?: string;
-  websiteUrl: string;
+  websiteUrl?: string;
 }
 
 const professionalProjects: Project[] = [
@@ -65,6 +65,12 @@ const personalProjects: Project[] = [
     githubUrl: "https://github.com/payneandrew/national-park-tracker",
     websiteUrl: "https://www.national-park-explorer.com",
   },
+  {
+    title: "Andrew Payne's Portfolio",
+    description: "The website you're currently on ✨",
+    imageUrl: "/portfolio-screenshot.png",
+    githubUrl: "https://github.com/payneandrew/andrew-payne-portfolio",
+  },
 ];
 
 export default function WorkPage() {
@@ -119,12 +125,14 @@ const projectGrid = (projects: Project[]) => {
                   />
                 </Link>
               )}
-              <Link
-                href={project.websiteUrl}
-                className="relative mr-6 mb-4 lg:mb-0 text-lg font-medium text-black after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:rounded-sm after:bg-daisyPurple-800 after:transition-all after:duration-300 after:ease-linear hover:text-daisyPurple-800 hover:after:w-full xl:mr-[30px]"
-              >
-                View Site
-              </Link>
+              {project.websiteUrl && (
+                <Link
+                  href={project.websiteUrl}
+                  className="relative mr-6 mb-4 lg:mb-0 text-lg font-medium text-black after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:rounded-sm after:bg-daisyPurple-800 after:transition-all after:duration-300 after:ease-linear hover:text-daisyPurple-800 hover:after:w-full xl:mr-[30px]"
+                >
+                  View Site
+                </Link>
+              )}
             </div>
           </div>
         </div>

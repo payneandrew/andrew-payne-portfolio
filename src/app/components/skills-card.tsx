@@ -1,10 +1,10 @@
 import Image from "next/image";
 
-interface SkillsCardProps {
+export interface SkillsCardProps {
   title: string;
   description: string;
-  items: string[];
-  tools: string[];
+  list1?: string[];
+  list2: string[];
   header1: string;
   header2: string;
   iconPath: string;
@@ -13,8 +13,8 @@ interface SkillsCardProps {
 export default function SkillsCard({
   title,
   description,
-  items,
-  tools,
+  list1,
+  list2,
   header1,
   header2,
   iconPath,
@@ -28,13 +28,18 @@ export default function SkillsCard({
         <h2 className="text-2xl font-bold">{title}</h2>
       </div>
       <p className="text-gray-600 mb-4">{description}</p>
-      <h3 className="text-daisyPurple-500 mb-2">{header1}</h3>
-      <ul className="mb-4">
-        <li>{items.join(", ")}</li>
-      </ul>
+      {list1 && (
+        <>
+          <h3 className="text-daisyPurple-500 mb-2">{header1}</h3>
+
+          <ul className="mb-4">
+            <li>{list1.join(", ")}</li>
+          </ul>
+        </>
+      )}
       <h3 className="text-daisyPurple-500 mb-2">{header2}</h3>
       <ul className="">
-        {tools.map((tool, index) => (
+        {list2.map((tool, index) => (
           <li key={index}>{tool}</li>
         ))}
       </ul>
