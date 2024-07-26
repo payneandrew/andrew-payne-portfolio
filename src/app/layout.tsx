@@ -1,3 +1,4 @@
+import { GoogleTagManager } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import Footer from "./components/footer";
@@ -23,6 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${poppins.variable}`}>
+      <GoogleTagManager gtmId="G-1QHVWLNL22" />
       <body className={poppins.className}>
         <NavBar />
         {children}
