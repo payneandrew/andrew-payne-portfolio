@@ -110,6 +110,7 @@ const projectGrid = (projects: Project[]) => {
               height={0}
               sizes="100vw"
               style={{ width: "100%", height: "auto" }}
+              priority={index === 0 || index === 1 || index === 2}
             />
           )}
           <div className="">

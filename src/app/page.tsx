@@ -27,6 +27,7 @@ export default function Home() {
             alt="andrew-payne-headshot"
             width={500}
             height={500}
+            priority
           />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 rounded-2xl bg-white">

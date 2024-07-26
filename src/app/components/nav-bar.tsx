@@ -23,6 +23,7 @@ export const NavBar = () => {
                   alt="home-icon"
                   width={70}
                   height={70}
+                  priority
                 />
               </Link>
               <div className="lg:hidden">
