@@ -23,7 +23,6 @@ export default function Home() {
         </div>
         <div className="mt-6">
           <Image
-            className=""
             src={"/andrew-memoji.png"}
             alt="andrew-payne-headshot"
             width={500}
