@@ -19,6 +19,15 @@ const config: Config = {
         poppins: "Poppins, sans-serif",
         jakarta: "JakartaPlus, sans-serif",
       },
+      keyframes: {
+        growFromCenter: {
+          "0%": { left: "50%", transform: "translateX(-50%)", width: "0%" },
+          "100%": { left: "50%", transform: "translateX(-50%)", width: "100%" },
+        },
+      },
+      animation: {
+        growFromCenter: "growFromCenter 2s linear forwards",
+      },
     },
   },
   plugins: [],

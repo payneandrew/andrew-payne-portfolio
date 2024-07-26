@@ -76,15 +76,16 @@ const personalProjects: Project[] = [
 export default function WorkPage() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between md:p-24 p-6 bg-home-gradient">
-      <div className="flex flex-col  w-full gap-8">
-        <h1 className="text-4xl md:text-6xl font-bold mb-8 text-center">
-          My Work
-        </h1>
-        <h2 className="text-3xl md:text-5xl font-semibold mb-6 text-center">
+      <div className="flex flex-col w-full gap-8">
+        <h1 className="text-4xl md:text-6xl font-bold text-center">My Work</h1>
+        <div className="w-full h-1 overflow-hidden relative">
+          <div className="border-2 border-daisyPurple-600 rounded absolute top-0 animate-growFromCenter"></div>
+        </div>
+        <h2 className="text-3xl md:text-5xl font-semibold text-center">
           Professional Projects
         </h2>
         {projectGrid(professionalProjects)}
-        <h2 className="text-3xl md:text-5xl font-semibold mb-6 text-center">
+        <h2 className="text-3xl md:text-5xl font-semibold text-center mt-6">
           Personal Projects
         </h2>
         {projectGrid(personalProjects)}

@@ -78,12 +78,12 @@ export const NavBar = () => {
                   >
                     Work
                   </Link>
-                  <Link
+                  {/* <Link
                     href={"/resume"}
                     className="relative mr-6 mb-4 lg:mb-0 text-lg font-medium text-black after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:rounded-sm after:bg-daisyPurple-800 after:transition-all after:duration-300 after:ease-linear hover:text-daisyPurple-800 hover:after:w-full xl:mr-[44px]"
                   >
                     Resume
-                  </Link>
+                  </Link> */}
                   <Link
                     href={"/say-hello"}
                     className="h-12 w-28 items-center justify-center overflow-hidden rounded border-2 border-solid border-daisyPurple-800 bg-daisyPurple-800 font-semibold text-white duration-300 ease-linear hover:bg-white hover:text-daisyPurple-800 flex hover:after:content-['👋🏻']"
