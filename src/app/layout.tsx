@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${poppins.variable}`}>
-      <GoogleAnalytics gtmId="G-1QHVWLNL22" />
+      <GoogleAnalytics gaId="G-1QHVWLNL22" />
       <body className={poppins.className}>
         <NavBar />
         {children}
