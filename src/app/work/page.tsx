@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -72,6 +73,12 @@ const personalProjects: Project[] = [
     githubUrl: "https://github.com/payneandrew/andrew-payne-portfolio",
   },
 ];
+
+export const metadata: Metadata = {
+  title: "Work | Andrew Payne",
+  description:
+    "Learn more about Andrew Payne's background, skills, and interests.",
+};
 
 export default function WorkPage() {
   return (

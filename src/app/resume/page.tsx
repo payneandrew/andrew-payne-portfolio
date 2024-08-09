@@ -1,4 +1,10 @@
+import { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Resume | Andrew Payne",
+  description: "Andrew Payne's Personal Website",
+};
 
 export default function Resume() {
   return (

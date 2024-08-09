@@ -1,5 +1,4 @@
-import { GoogleAnalytics } from '@next/third-parties/google'
-import type { Metadata } from "next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Poppins } from "next/font/google";
 import Footer from "./components/footer";
 import NavBar from "./components/nav-bar";
@@ -11,11 +10,6 @@ const poppins = Poppins({
   variable: "--font-poppins",
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
-
-export const metadata: Metadata = {
-  title: "Andrew Payne | Frontend Software Engineer",
-  description: "Andrew Payne's Personal Website",
-};
 
 export default function RootLayout({
   children,

@@ -1,6 +1,10 @@
-"use client";
-
+import { Metadata } from "next";
 import ContactForm from "../components/contact-form";
+
+export const metadata: Metadata = {
+  title: "Say Hello | Andrew Payne",
+  description: "Andrew Payne's Personal Website",
+};
 
 export default function SayHello() {
   return (

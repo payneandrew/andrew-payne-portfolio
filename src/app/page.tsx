@@ -1,22 +1,19 @@
-"use client";
+import { Metadata } from "next";
 import Image from "next/image";
-import Typewriter from "typewriter-effect";
 import SkillsCard, { SkillsCardProps } from "./components/skills-card";
+import TypeWriter from "./components/typewriter";
+
+export const metadata: Metadata = {
+  title: "Home | Andrew Payne",
+  description: "Andrew Payne's Personal Website",
+};
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between md:p-24 p-6 bg-home-gradient">
       <div className="flex flex-col items-center justify-center text-center gap-12">
         <div>
-          <div className="text-4xl md:text-6xl font-bold text-gray-900 h-36">
-            <Typewriter
-              options={{
-                strings: ["Frontend Software Engineer"],
-                autoStart: true,
-                loop: true,
-              }}
-            />
-          </div>
+          <TypeWriter />
           <p className="text-lg md:text-xl text-gray-600 mt-4">
             I ideate and code beautifully simple things, and I love what I do.
           </p>
