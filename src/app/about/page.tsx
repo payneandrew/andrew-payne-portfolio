@@ -18,7 +18,7 @@ export default function About() {
         </div>
         <section className="flex flex-col md:flex-row items-center md:items-start gap-8">
           <Image
-            src="/andrew-payne-headshot.jpg"
+            src="/andrew-payne-headshot.JPG"
             alt="Andrew Payne"
             width={250}
             height={250}
