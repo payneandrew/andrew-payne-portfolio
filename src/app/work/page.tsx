@@ -26,6 +26,14 @@ const professionalProjects: Project[] = [
     websiteUrl: "https://yoomi.health",
   },
   {
+    title: "Yoomi Copilot Chrome Extension",
+    description:
+      "The Yoomi Chrome Extension revolutionizes physical and occupational therapy by automating patient note-taking and seamlessly integrating Home Exercise Program (HEP) creation within your EMR system.",
+    imageUrl: "/yoomi-chrome-extension.png",
+    websiteUrl:
+      "https://chromewebstore.google.com/detail/yoomi-copilot/icfjloocbjogmgihnhdnncjbgadnikag?authuser=4&hl=en",
+  },
+  {
     title: "Capital One Flagship Retail Banking Web and Mobile Applications",
     description:
       "Architected user analytics for the Capital One Retail Bank flagship web application.",
