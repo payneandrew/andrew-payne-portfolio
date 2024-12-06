@@ -128,7 +128,7 @@ const projectGrid = (projects: Project[]) => {
               priority={index === 0 || index === 1 || index === 2}
             />
           )}
-          <div className="">
+          <div>
             <h3 className="text-2xl font-bold ">{project.title}</h3>
             <p className="text-gray-600 mt-2">{project.description}</p>
             <div className="mt-4 flex gap-2">

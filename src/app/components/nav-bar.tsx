@@ -65,35 +65,30 @@ export const NavBar = () => {
                 </button>
               </div>
               <div className={`${isMenuOpen ? "block" : "hidden"} lg:block`}>
-                <div className="flex flex-col lg:flex-row items-center">
+                <div className="flex flex-col lg:flex-row items-center gap-3 md:gap-6">
                   <Link
                     href={"/"}
-                    className="relative mr-6 mb-4 lg:mb-0 text-lg font-medium text-black after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:rounded-sm after:bg-daisyPurple-800 after:transition-all after:duration-300 after:ease-linear hover:text-daisyPurple-800 hover:after:w-full xl:mr-[30px]"
+                    className="relative text-lg font-medium text-black after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:rounded-sm after:bg-daisyPurple-800 after:transition-all after:duration-300 after:ease-linear hover:text-daisyPurple-800 hover:after:w-full"
                   >
                     Home
                   </Link>
 
                   <Link
                     href={"/work"}
-                    className="relative mr-6 mb-4 lg:mb-0 text-lg font-medium text-black after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:rounded-sm after:bg-daisyPurple-800 after:transition-all after:duration-300 after:ease-linear hover:text-daisyPurple-800 hover:after:w-full xl:mr-[44px]"
+                    className="relative text-lg font-medium text-black after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:rounded-sm after:bg-daisyPurple-800 after:transition-all after:duration-300 after:ease-linear hover:text-daisyPurple-800 hover:after:w-full "
                   >
                     Work
                   </Link>
                   <Link
                     href={"/about"}
-                    className="relative mr-6 mb-4 lg:mb-0 text-lg font-medium text-black after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:rounded-sm after:bg-daisyPurple-800 after:transition-all after:duration-300 after:ease-linear hover:text-daisyPurple-800 hover:after:w-full xl:mr-[44px]"
+                    className="relative text-lg font-medium text-black after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:rounded-sm after:bg-daisyPurple-800 after:transition-all after:duration-300 after:ease-linear hover:text-daisyPurple-800 hover:after:w-full"
                   >
                     About Me
                   </Link>
-                  {/* <Link
-                    href={"/resume"}
-                    className="relative mr-6 mb-4 lg:mb-0 text-lg font-medium text-black after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:rounded-sm after:bg-daisyPurple-800 after:transition-all after:duration-300 after:ease-linear hover:text-daisyPurple-800 hover:after:w-full xl:mr-[44px]"
-                  >
-                    Resume
-                  </Link> */}
+
                   <Link
                     href={"/say-hello"}
-                    className="h-12 w-28 items-center justify-center overflow-hidden rounded border-2 border-solid border-daisyPurple-800 bg-daisyPurple-800 font-semibold text-white duration-300 ease-linear hover:bg-white hover:text-daisyPurple-800 flex hover:after:content-['👋🏻']"
+                    className="py-2.5 px-4 items-center justify-center overflow-hidden rounded border-2 border-solid border-daisyPurple-800 bg-daisyPurple-800 font-semibold text-white duration-300 ease-linear hover:bg-white hover:text-daisyPurple-800 flex hover:after:content-['👋🏻']"
                   >
                     Say Hello
                   </Link>
