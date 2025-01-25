@@ -1,7 +1,7 @@
 "use client";
 
-import styles from "./switch.module.css";
 import { memo, useEffect, useState } from "react";
+import styles from "./switch.module.css";
 
 declare global {
   var updateDOM: () => void;
@@ -61,7 +61,7 @@ const Switch = () => {
     () =>
       ((typeof localStorage !== "undefined" &&
         localStorage.getItem(STORAGE_KEY)) ??
-        "system") as ColorSchemePreference,
+        "system") as ColorSchemePreference
   );
 
   useEffect(() => {
@@ -92,6 +92,8 @@ const Switch = () => {
   );
 };
 
+Switch.displayName = "Switch";
+
 const Script = memo(() => (
   <script
     dangerouslySetInnerHTML={{
@@ -99,6 +101,8 @@ const Script = memo(() => (
     }}
   />
 ));
+
+Script.displayName = "NoFOUCScript";
 
 /**
  * This component wich applies classes and transitions.
