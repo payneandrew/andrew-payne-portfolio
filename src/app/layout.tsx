@@ -1,5 +1,6 @@
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Poppins } from "next/font/google";
+import "prismjs/themes/prism-okaidia.css";
 import Footer from "./components/footer";
 import NavBar from "./components/nav-bar";
 import "./globals.css";

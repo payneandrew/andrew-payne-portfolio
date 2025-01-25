@@ -1,10 +1,17 @@
+import { Metadata } from "next";
 import Container from "../components/blog/container";
 import { HeroPost } from "../components/blog/hero-post";
 import { Intro } from "../components/blog/intro";
 import { MoreStories } from "../components/blog/more-stories";
 import { getAllPosts } from "../lib/api";
 
-export default function Index() {
+export const metadata: Metadata = {
+  title: "Blog | Andrew Payne",
+  description:
+    "Explore Andrew Payne's blog for insights on software development and his other interests.",
+};
+
+export default function Blog() {
   const allPosts = getAllPosts();
 
   const heroPost = allPosts[0];
