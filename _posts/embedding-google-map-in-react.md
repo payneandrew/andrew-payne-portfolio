@@ -75,6 +75,8 @@ export const MapContainer: React.FC = () => {
 - **Zoom Level**: Adjust the zoom level using the `zoom` prop.
 - **Responsive Map**: The `mapStyles` object ensures a responsive map size. Customize this to your liking
 
+  ![Google Maps Screenshot](/google-map-screenshot.png)
+
 ## Step 5: Adding markers
 
 Adding markers can be helpful for highlighting significant locations. To add markers, you will use the `Marker` component from `@react-google-maps/api`. Create a prop called markerPositions. This will be an array of markers that you can pass into your component and will show up on the map.
@@ -119,6 +121,8 @@ export const MapContainer: React.FC<MapContainerProps> = ({
 - **Center**: The center is now the first item in the markerPosition array.
 - **Mapping Through Markers**: By mapping over the `markerPositions` array, we are now displaying all of the markers that are specified in the prop.
 - **Label**: Passing in a label allows you to give the location a name.
+
+  ![Google Maps Screenshot Marker](/google-map-screenshot-marker.png)
 
 ## Step 6: Use the Map Component
 
