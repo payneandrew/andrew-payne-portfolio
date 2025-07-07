@@ -6,7 +6,7 @@ export default function TypeWriter() {
     <div className="text-4xl md:text-6xl font-bold text-gray-900 h-36">
       <Typewriter
         options={{
-          strings: ["Frontend Software Engineer"],
+          strings: ["Senior Software Engineer"],
           autoStart: true,
           loop: true,
         }}
